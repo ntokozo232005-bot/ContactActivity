@@ -5,11 +5,20 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
+import android.util.Log
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        val firstName="ntokozo"
+        val lastName="ngcobo"
+        var address="25abeliastreet"
+        val isMale=false
+        val dayOfBirth=23
+        val monthOfBirth="may"
+        val yearOfBirth=2005
+        Log.d("Hi", firstName + " " + lastName+ "you live in " + address + " it is" + isMale+ "that you are male"+ dayOfBirth+" "+
+         monthOfBirth+" "+yearOfBirth)
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
